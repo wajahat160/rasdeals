@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Packages</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .ticket-card {
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 200px;
+            text-align: center;
+            padding: 10px;
+            box-sizing: border-box;
+            position: relative;
+        }
+        .ticket-card img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .ticket-card h3 {
+            font-size: 16px;
+            color: #1a2e5a;
+            margin: 10px 0;
+            font-weight: normal;
+        }
+        .ticket-card .price {
+            color: #00cc66;
+            font-weight: bold;
+            margin: 5px 0;
+        }
+        .ticket-card .buttons {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 10px;
+        }
+        .ticket-card button {
+            background: none;
+            border: 1px solid #1a2e5a;
+            border-radius: 20px;
+            padding: 5px 15px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .ticket-card button.details {
+            color: #1a2e5a;
+            background: #e0e7f0;
+        }
+        .ticket-card button.tickets {
+            color: #ffffff;
+            background: #00cc66;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background: #ffffff;
+            border-radius: 15px;
+            padding: 20px;
+            width: 400px;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        .modal-content h2 {
+            color: #1a2e5a;
+            margin-top: 0;
+        }
+        .modal-content p {
+            color: #333;
+            margin: 10px 0;
+        }
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 24px;
+            cursor: pointer;
+            color: #888;
+            background: none;
+            border: none;
+        }
+        .close:hover {
+            color: #000;
+        }
+        .whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25d366;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .whatsapp img {
+            width: 40px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="ticket-card">
+        <img src="https://i.ibb.co/rgg0hy5/2393-s-1.webp" alt="Alexandra Dhow Cruise in Dubai Marina">
+        <h3>Alexandra Dhow Cruise in Dubai Marina</h3>
+        <div class="price">Adult: 180.00 AED | Child: 120.00 AED</div>
+        <div class="buttons">
+            <button class="details" onclick="openModal('alexandraDhow')">Details</button>
+            <button class="tickets">Tickets</button>
+        </div>
+    </div>
+    <div class="ticket-card">
+        <img src="https://i.ibb.co/hbjbVJV/1903-s-1.webp" alt="Alexandra Sea Lounge">
+        <h3>Alexandra Sea Lounge</h3>
+        <div class="price">Adult: 180.00 AED | Child: 120.00 AED</div>
+        <div class="buttons">
+            <button class="details" onclick="openModal('alexandraSea')">Details</button>
+            <button class="tickets">Tickets</button>
+        </div>
+    </div>
+    <div class="ticket-card">
+        <img src="https://i.ibb.co/rKyLVncC/1405-s-1.webp" alt="Abu Dhabi City Tour">
+        <h3>Abu Dhabi City Tour</h3>
+        <div class="price">Adult: 220.00 AED | Child: 150.00 AED</div>
+        <div class="buttons">
+            <button class="details" onclick="openModal('abuDhabiCity')">Details</button>
+            <button class="tickets">Tickets</button>
+        </div>
+    </div>
+    <div class="ticket-card">
+        <img src="https://i.ibb.co/6RNm2HRn/4048-s-1.webp" alt="AYA Universe Dubai">
+        <h3>AYA Universe Dubai</h3>
+        <div class="price">Adult: 149.00 AED | Child: 99.00 AED</div>
+        <div class="buttons">
+            <button class="details" onclick="openModal('ayaUniverse')">Details</button>
+            <button class="tickets">Tickets</button>
+        </div>
+    </div>
+    <div class="ticket-card">
+        <img src="https://i.ibb.co/5Wr8wPw9/3885-s-1.webp" alt="House of Hype">
+        <h3>House of Hype</h3>
+        <div class="price">Adult: 120.00 AED | Child: 80.00 AED</div>
+        <div class="buttons">
+            <button class="details" onclick="openModal('houseOfHype')">Details</button>
+            <button class="tickets">Tickets</button>
+        </div>
+    </div>
+    <div class="ticket-card">
+        <img src="https://i.ibb.co/rGnFMvdr/3895-s-1.webp" alt="Modern Dubai City Tour with Sightseeing Cruise">
+        <h3>Modern Dubai City Tour with Sightseeing Cruise</h3>
+        <div class="price">Adult: 250.00 AED | Child: 180.00 AED</div>
+        <div class="buttons">
+            <button class="details" onclick="openModal('modernDubaiTour')">Details</button>
+            <button class="tickets">Tickets</button>
+        </div>
+    </div>
+    <div class="ticket-card">
+        <img src="https://i.ibb.co/jvMZP4ZS/3666-s-1.webp" alt="Night Dubai City Tour with Dinner Cruise">
+        <h3>Night Dubai City Tour with Dinner Cruise</h3>
+        <div class="price">Adult: 300.00 AED | Child: 220.00 AED</div>
+        <div class="buttons">
+            <button class="details" onclick="openModal('nightDubaiTour')">Details</button>
+            <button class="tickets">Tickets</button>
+        </div>
+    </div>
+    <div class="ticket-card">
+        <img src="https://i.ibb.co/HLHHHz7V/3914-s-1.webp" alt="5 Emirates + Indian Ocean Tour">
+        <h3>5 Emirates + Indian Ocean Tour</h3>
+        <div class="price">Adult: 450.00 AED | Child: 350.00 AED</div>
+        <div class="buttons">
+            <button class="details" onclick="openModal('fiveEmirates')">Details</button>
+            <button class="tickets">Tickets</button>
+        </div>
+    </div>
+    <div class="ticket-card">
+        <img src="https://i.ibb.co/XZKkktjS/1304-s-1.webp" alt="Abu Dhabi Emirates Park Zoo">
+        <h3>Abu Dhabi Emirates Park Zoo</h3>
+        <div class="price">Adult: 80.00 AED | Child: 50.00 AED</div>
+        <div class="buttons">
+            <button class="details" onclick="openModal('emiratesParkZoo')">Details</button>
+            <button class="tickets">Tickets</button>
+        </div>
+    </div>
+    <div class="ticket-card">
+        <img src="https://i.ibb.co/Xr5fzp3V/3917-s-1.webp" alt="Ain Dubai Ferris Wheel">
+        <h3>Ain Dubai Ferris Wheel</h3>
+        <div class="price">Adult: 440.00 AED | Child: 440.00 AED</div>
+        <div class="buttons">
+            <button class="details" onclick="openModal('ainDubai')">Details</button>
+            <button class="tickets">Tickets</button>
+        </div>
+    </div>
+    <div class="ticket-card">
+        <img src="https://i.ibb.co/BKNXwyCH/537-s-1.webp" alt="Aquarium and Underwater Zoo at the Dubai Mall">
+        <h3>Aquarium and Underwater Zoo at the Dubai Mall</h3>
+        <div class="price">Adult: 199.00 AED | Child: 150.00 AED</div>
+        <div class="buttons">
+            <button class="details" onclick="openModal('dubaiAquarium')">Details</button>
+            <button class="tickets">Tickets</button>
+        </div>
+    </div>
+    <div class="ticket-card">
+        <img src="https://i.ibb.co/d0RXMgQ0/2407-s-1.webp" alt="Aquaventure Waterpark">
+        <h3>Aquaventure Waterpark</h3>
+        <div class="price">Adult: 320.00 AED | Child: 270.00 AED</div>
+        <div class="buttons">
+            <button class="details" onclick="openModal('aquaventure')">Details</button>
+            <button class="tickets">Tickets</button>
+        </div>
+    </div>
+    <div class="ticket-card">
+        <img src="https://i.ibb.co/mV21g544/3767-s-1.webp" alt="Buggy & Quad Bike Safari in Dubai">
+        <h3>Buggy & Quad Bike Safari in Dubai</h3>
+        <div class="price">Adult: 300.00 AED | Child: 250.00 AED</div>
+        <div class="buttons">
+            <button class="details" onclick="openModal('buggySafari')">Details</button>
+            <button class="tickets">Tickets</button>
+        </div>
+    </div>
+    <div class="ticket-card">
+        <img src="https://i.ibb.co/Fqf2WPj9/2301-s-1.webp" alt="Desert Safari in Ras Al-Khaimah & Fujairah">
+        <h3>Desert Safari in Ras Al-Khaimah & Fujairah</h3>
+        <div class="price">Adult: 350.00 AED | Child: 280.00 AED</div>
+        <div class="buttons">
+            <button class="details" onclick="openModal('rasAlKhaimahSafari')">Details</button>
+            <button class="tickets">Tickets</button>
+        </div>
+    </div>
+    <div class="ticket-card">
+        <img src="https://i.ibb.co/vxPfKwrQ/1854-s-1.webp" alt="Dinner in the Sky">
+        <h3>Dinner in the Sky</h3>
+        <div class="price">Adult: 799.00 AED</div>
+        <div class="buttons">
+            <button class="details" onclick="openModal('dinnerSky')">Details</button>
+            <button class="tickets">Tickets</button>
+        </div>
+    </div>
+    <div class="ticket-card">
+        <img src="https://i.ibb.co/zhRcKrWN/3973-s-1.webp" alt="Dolphin Bay at Atlantis the Palm">
+        <h3>Dolphin Bay at Atlantis the Palm</h3>
+        <div class="price">Adult: 825.00 AED | Child: 649.00 AED</div>
+        <div class="buttons">
+            <button class="details" onclick="openModal('dolphinBay')">Details</button>
+            <button class="tickets">Tickets</button>
+        </div>
+    </div>
+    <div class="ticket-card">
+        <img src="https://i.ibb.co/XfRPLj3Q/3956-s-1.webp" alt="Dubai Crocodile Park">
+        <h3>Dubai Crocodile Park</h3>
+        <div class="price">Adult: 90.00 AED | Child: 60.00 AED</div>
+        <div class="buttons">
+            <button class="details" onclick="openModal('crocodilePark')">Details</button>
+            <button class="tickets">Tickets</button>
+        </div>
+    </div>
+    <div class="ticket-card">
+        <img src="https://i.ibb.co/1YCSmHCf/641-s-1.webp" alt="Dubai Dolphinarium">
+        <h3>Dubai Dolphinarium</h3>
+        <div class="price">Adult: 120.00 AED | Child: 80.00 AED</div>
+        <div class="buttons">
+            <button class="details" onclick="openModal('dolphinarium')">Details</button>
+            <button class="tickets">Tickets</button>
+        </div>
+    </div>
+    <div class="ticket-card">
+        <img src="https://i.ibb.co/VW5nLg55/2513-s-1.webp" alt="Dubai Frame">
+        <h3>Dubai Frame</h3>
+        <div class="price">Adult: 50.00 AED | Child: 30.00 AED</div>
+        <div class="buttons">
+            <button class="details" onclick="openModal('dubaiFrame')">Details</button>
+            <button class="tickets">Tickets</button>
+        </div>
+    </div>
+    <div class="ticket-card">
+        <img src="https://i.ibb.co/RknHQk3x/3986-s-1.webp" alt="Dubai Miracle Garden">
+        <h3>Dubai Miracle Garden</h3>
+        <div class="price">Adult: 75.00 AED | Child: 55.00 AED</div>
+        <div class="buttons">
+            <button class="details" onclick="openModal('miracleGarden')">Details</button>
+            <button class="tickets">Tickets</button>
+        </div>
+    </div>
+    <div class="ticket-card">
+        <img src="https://i.ibb.co/Py5pvNx/1791-s-1.webp" alt="Ferrari World Abu Dhabi Theme Park">
+        <h3>Ferrari World Abu Dhabi Theme Park</h3>
+        <div class="price">Adult: 345.00 AED</div>
+        <div class="buttons">
+            <button class="details" onclick="openModal('ferrariWorld')">Details</button>
+            <button class="tickets">Tickets</button>
+        </div>
+    </div>
+    <div class="ticket-card">
+        <img src="https://i.ibb.co/sJRmN4Nm/2448-s-1.webp" alt="Helicopter Flight Abu Dhabi">
+        <h3>Helicopter Flight Abu Dhabi</h3>
+        <div class="price">Adult: 700.00 AED</div>
+        <div class="buttons">
+            <button class="details" onclick="openModal('helicopterAbu')">Details</button>
+            <button class="tickets">Tickets</button>
+        </div>
+    </div>
+    <div class="ticket-card">
+        <img src="https://i.ibb.co/kVR4gcCB/3708-s-1.webp" alt="Helicopter Flight from Dubai Police Academy by HeliDubai">
+        <h3>Helicopter Flight from Dubai Police Academy by HeliDubai</h3>
+        <div class="price">Adult: 710.00 AED | Child: 710.00 AED</div>
+        <div class="buttons">
+            <button class="details" onclick="openModal('helicopterDubaiPolice')">Details</button>
+            <button class="tickets">Tickets</button>
+        </div>
+    </div>
+    <div class="ticket-card">
+        <img src="https://i.ibb.co/RpnNq2KL/2252-s-1.webp" alt="Helicopter flight from the Palm Island, Dubai">
+        <h3>Helicopter flight from the Palm Island, Dubai</h3>
+        <div class="price">Adult: 715.00 AED</div>
+        <div class="buttons">
+            <button class="details" onclick="openModal('helicopterPalm')">Details</button>
+            <button class="tickets">Tickets</button>
+        </div>
+    </div>
+    <div class="ticket-card">
+        <img src="https://i.ibb.co/DHrV0Nq4/2488-s-1.webp" alt="Heritage Safari">
+        <h3>Heritage Safari</h3>
+        <div class="price">Adult: 695.00 AED | Child: 695.00 AED</div>
+        <div class="buttons">
+            <button class="details" onclick="openModal('heritageSafari')">Details</button>
+            <button class="tickets">Tickets</button>
+        </div>
+    </div>
+    <div class="ticket-card">
+        <img src="https://i.ibb.co/wZWrnkjP/3739-s-1.webp" alt="Hot Air Balloon Flight in Dubai">
+        <h3>Hot Air Balloon Flight in Dubai</h3>
+        <div class="price">Adult: 1099.00 AED | Child: 940.00 AED</div>
+        <div class="buttons">
+            <button class="details" onclick="openModal('hotAirBalloon')">Details</button>
+            <button class="tickets">Tickets</button>
+        </div>
+    </div>
+    <div class="ticket-card">
+        <img src="https://i.ibb.co/3mBKpq0v/2439-s-1.webp" alt="IMG Worlds of Adventure Theme Park">
+        <h3>IMG Worlds of Adventure Theme Park</h3>
+        <div class="price">Adult: 365.00 AED | Child: 365.00 AED</div>
+        <div class="buttons">
+            <button class="details" onclick="openModal('imgWorlds')">Details</button>
+            <button class="tickets">Tickets</button>
+        </div>
+    </div>
+    <div class="ticket-card">
+        <img src="https://i.ibb.co/0pZwM1VF/3681-s-1.webp" alt="Inside Burj Al Arab">
+        <h3>Inside Burj Al Arab</h3>
+        <div class="price">Adult: 249.00 AED</div>
+        <div class="buttons">
+            <button class="details" onclick="openModal('insideBurj')">Details</button>
+            <button class="tickets">Tickets</button>
+        </div>
+    </div>
+    <div class="ticket-card">
+        <img src="https://i.ibb.co/nySSJgC/3832-s-1.webp" alt="KidZania Dubai">
+        <h3>KidZania Dubai</h3>
+        <div class="price">Adult: 100.00 AED | Child: 90.00 AED</div>
+        <div class="buttons">
+            <button class="details" onclick="openModal('kidZania')">Details</button>
+            <button class="tickets">Tickets</button>
+        </div>
+    </div>
+    <div class="ticket-card">
+        <img src="https://i.ibb.co/LKbHCfH/2835-s-1.webp" alt="La Perle Show">
+        <h3>La Perle Show</h3>
+        <div class="price">Adult: 270.00 AED</div>
+        <div class="buttons">
+            <button class="details" onclick="openModal('laPerle')">Details</button>
+            <button class="tickets">Tickets</button>
+        </div>
+    </div>
+    <div class="ticket-card">
+        <img src="https://i.ibb.co/7NZ4GV21/1885-s-1.webp" alt="LEGOLAND Dubai Theme Park">
+        <h3>LEGOLAND Dubai Theme Park</h3>
+        <div class="price">Adult: 295.00 AED | Child: 295.00 AED</div>
+        <div class="buttons">
+            <button class="details" onclick="openModal('legoland')">Details</button>
+            <button class="tickets">Tickets</button>
+        </div>
+    </div>
+    <div class="ticket-card">
+        <img src="https://i.ibb.co/jkTwhD4k/587-s-1.webp" alt="LEGOLAND Waterpark">
+        <h3>LEGOLAND Waterpark</h3>
+        <div class="price">Adult: 295.00 AED | Child: 295.00 AED</div>
+        <div class="buttons">
+            <button class="details" onclick="openModal('legolandWater')">Details</button>
+            <button class="tickets">Tickets</button>
+        </div>
+    </div>
+    <div class="ticket-card">
+        <img src="https://i.ibb.co/whC6VTf6/1277-s-1.webp" alt="Lost Chambers Aquarium">
+        <h3>Lost Chambers Aquarium</h3>
+        <div class="price">Adult: 135.00 AED | Child: 95.00 AED</div>
+        <div class="buttons">
+            <button class="details" onclick="openModal('lostChambers')">Details</button>
+            <button class="tickets">Tickets</button>
+        </div>
+    </div>
+    <div class="ticket-card">
+        <img src="https://i.ibb.co/HpNxwndL/1953-s-1.webp" alt="Lotus Royale Dinner Cruise">
+        <h3>Lotus Royale Dinner Cruise</h3>
+        <div class="price">Adult: 249.00 AED</div>
+        <div class="buttons">
+            <button class="details" onclick="openModal('lotusRoyale')">Details</button>
+            <button class="tickets">Tickets</button>
+        </div>
+    </div>
+    <div class="ticket-card">
+        <img src="https://i.ibb.co/1JvmL1Cs/2810-s-1.webp" alt="Louvre Museum Abu Dhabi">
+        <h3>Louvre Museum Abu Dhabi</h3>
+        <div class="price">Adult: 60.00 AED | Child: 30.00 AED</div>
+        <div class="buttons">
+            <button class="details" onclick="openModal('louvre')">Details</button>
+            <button class="tickets">Tickets</button>
+        </div>
+    </div>
+    <div class="ticket-card">
+        <img src="https://i.ibb.co/2BMYCjd/1818-s-1.webp" alt="Madame Tussauds Dubai">
+        <h3>Madame Tussauds Dubai</h3>
+        <div class="price">Adult: 130.00 AED</div>
+        <div class="buttons">
+            <button class="details" onclick="openModal('madameTussauds')">Details</button>
+            <button class="tickets">Tickets</button>
+        </div>
+    </div>
+    <div class="ticket-card">
+        <img src="https://i.ibb.co/PzWxxnk5/2363-s-1.webp" alt="Motion Gate Dubai Theme Park">
+        <h3>Motion Gate Dubai Theme Park</h3>
+        <div class="price">Adult: 295.00 AED | Child: 295.00 AED</div>
+        <div class="buttons">
+            <button class="details" onclick="openModal('motionGate')">Details</button>
+            <button class="tickets">Tickets</button>
+        </div>
+    </div>
+    <div class="ticket-card">
+        <img src="https://i.ibb.co/9969N33y/1530-s-1.webp" alt="Musandam Day Trip">
+        <h3>Musandam Day Trip</h3>
+        <div class="price">Adult: 200.00 AED | Child: 150.00 AED</div>
+        <div class="buttons">
+            <button class="details" onclick="openModal('musandam')">Details</button>
+            <button class="tickets">Tickets</button>
+        </div>
+    </div>
+    <div class="ticket-card">
+        <img src="https://i.ibb.co/ns32zJbg/2401-s-1.webp" alt="Museum of the Future">
+        <h3>Museum of the Future</h3>
+        <div class="price">Adult: 399.00 AED | Child: 399.00 AED</div>
+        <div class="buttons">
+            <button class="details" onclick="openModal('museumFuture')">Details</button>
+            <button class="tickets">Tickets</button>
+        </div>
+    </div>
+    <div class="ticket-card">
+        <img src="https://i.ibb.co/fY57gjTw/2354-s-1.webp" alt="National Aquarium Abu Dhabi">
+        <h3>National Aquarium Abu Dhabi</h3>
+        <div class="price">Adult: 110.00 AED | Child: 70.00 AED</div>
+        <div class="buttons">
+            <button class="details" onclick="openModal('nationalAquarium')">Details</button>
+            <button class="tickets">Tickets</button>
+        </div>
+    </div>
+    <div class="ticket-card">
+        <img src="https://i.ibb.co/TDsjL9GY/2320-s-1.webp" alt="Qasr Al Hosn">
+        <h3>Qasr Al Hosn</h3>
+        <div class="price">Adult: 25.00 AED | Child: 15.00 AED</div>
+        <div class="buttons">
+            <button class="details" onclick="openModal('qasrAlHosn')">Details</button>
+            <button class="tickets">Tickets</button>
+        </div>
+    </div>
+    <div class="ticket-card">
+        <img src="https://i.ibb.co/GQkz0rPg/1333-s-1.webp" alt="Qasr Al Watan, Royal Palace">
+        <h3>Qasr Al Watan, Royal Palace</h3>
+        <div class="price">Adult: 60.00 AED | Child: 30.00 AED</div>
+        <div class="buttons">
+            <button class="details" onclick="openModal('qasrAlWatan')">Details</button>
+            <button class="tickets">Tickets</button>
+        </div>
+    </div>
+    <div class="ticket-card">
+        <img src="https://i.ibb.co/N2k8y9gh/3662-s-1.webp" alt="Real Madrid World">
+        <h3>Real Madrid World</h3>
+        <div class="price">Adult: 295.00 AED | Child: 295.00 AED</div>
+        <div class="buttons">
+            <button class="details" onclick="openModal('realMadrid')">Details</button>
+            <button class="tickets">Tickets</button>
+        </div>
+    </div>
+    <div class="ticket-card">
+        <img src="https://i.ibb.co/2YnLWHVy/3924-s-1.webp" alt="Sea World Abu Dhabi">
+        <h3>Sea World Abu Dhabi</h3>
+        <div class="price">Adult: 375.00 AED</div>
+        <div class="buttons">
+            <button class="details" onclick="openModal('seaWorld')">Details</button>
+            <button class="tickets">Tickets</button>
+        </div>
+    </div>
+    <div class="ticket-card">
+        <img src="https://i.ibb.co/qM3VdcKk/3698-s-1.webp" alt="Shindhaga Museum">
+        <h3>Shindhaga Museum</h3>
+        <div class="price">Adult: 30.00 AED | Child: 20.00 AED</div>
+        <div class="buttons">
+            <button class="details" onclick="openModal('shindhaga')">Details</button>
+            <button class="tickets">Tickets</button>
+        </div>
+    </div>
+    <div class="ticket-card">
+        <img src="https://i.ibb.co/YrjnZmx/3841-s-1.webp" alt="Ski Dubai">
+        <h3>Ski Dubai</h3>
+        <div class="price">Adult: 200.00 AED | Child: 160.00 AED</div>
+        <div class="buttons">
+            <button class="details" onclick="openModal('skiDubai')">Details</button>
+            <button class="tickets">Tickets</button>
+        </div>
+    </div>
+    <div class="ticket-card">
+        <img src="https://i.ibb.co/n8nwHL7y/3953-s-1.webp" alt="Sky View Dubai">
+        <h3>Sky View Dubai</h3>
+        <div class="price">Adult: 100.00 AED | Child: 70.00 AED</div>
+        <div class="buttons">
+            <button class="details" onclick="openModal('skyView')">Details</button>
+            <button class="tickets">Tickets</button>
+        </div>
+    </div>
+    <div class="ticket-card">
+        <img src="https://i.ibb.co/1Y473cZs/1325-s-1.webp" alt="TeamLab Phenomena">
+        <h3>TeamLab Phenomena</h3>
+        <div class="price">Adult: 150.00 AED | Child: 100.00 AED</div>
+        <div class="buttons">
+            <button class="details" onclick="openModal('teamLab')">Details</button>
+            <button class="tickets">Tickets</button>
+        </div>
+    </div>
+    <div class="ticket-card">
+        <img src="https://i.ibb.co/WN8DYKR2/2454-s-1.webp" alt="The Green Planet">
+        <h3>The Green Planet</h3>
+        <div class="price">Adult: 95.00 AED | Child: 70.00 AED</div>
+        <div class="buttons">
+            <button class="details" onclick="openModal('greenPlanet')">Details</button>
+            <button class="tickets">Tickets</button>
+        </div>
+    </div>
+    <div class="ticket-card">
+        <img src="https://i.ibb.co/8L4LJ9NP/1915-s-1.webp" alt="The Palm Monorail">
+        <h3>The Palm Monorail</h3>
+        <div class="price">Adult: 25.00 AED | Child: 15.00 AED</div>
+        <div class="buttons">
+            <button class="details" onclick="openModal('palmMonorail')">Details</button>
+            <button class="tickets">Tickets</button>
+        </div>
+    </div>
+    <div class="ticket-card">
+        <img src="https://i.ibb.co/HDVLjVYY/2494-s-1.webp" alt="The View at The Palm">
+        <h3>The View at The Palm</h3>
+        <div class="price">Adult: 90.00 AED | Child: 70.00 AED</div>
+        <div class="buttons">
+            <button class="details" onclick="openModal('viewAtPalm')">Details</button>
+            <button class="tickets">Tickets</button>
+        </div>
+    </div>
+    <div class="ticket-card">
+        <img src="https://i.ibb.co/v4vF8GXx/856-s-1.webp" alt="Warner Bros. World Abu Dhabi Theme Park">
+        <h3>Warner Bros. World Abu Dhabi Theme Park</h3>
+        <div class="price">Adult: 350.00 AED | Child: 300.00 AED</div>
+        <div class="buttons">
+            <button class="details" onclick="openModal('warnerBros')">Details</button>
+            <button class="tickets">Tickets</button>
+        </div>
+    </div>
+    <div class="ticket-card">
+        <img src="https://i.ibb.co/tPH9rv00/3862-s-1.webp" alt="Wild Wadi Waterpark, Dubai">
+        <h3>Wild Wadi Waterpark, Dubai</h3>
+        <div class="price">Adult: 269.00 AED</div>
+        <div class="buttons">
+            <button class="details" onclick="openModal('wildWadi')">Details</button>
+            <button class="tickets">Tickets</button>
+        </div>
+    </div>
+    <div class="ticket-card">
+        <img src="https://i.ibb.co/Cs9CCTVK/1405-s.webp" alt="Yas Island Multi Day, Multi Park Ticket (Ferrari, Warner, Yas & SeaWorld)">
+        <h3>Yas Island Multi Day, Multi Park Ticket (Ferrari, Warner, Yas & SeaWorld)</h3>
+        <div class="price">Adult: 475.00 AED | Child: 475.00 AED</div>
+        <div class="buttons">
+            <button class="details" onclick="openModal('yasIsland')">Details</button>
+            <button class="tickets">Tickets</button>
+        </div>
+    </div>
+    <div class="ticket-card">
+        <img src="https://i.ibb.co/YBPV0qzf/1903-s.webp" alt="Yas Waterworld, Abu Dhabi">
+        <h3>Yas Waterworld, Abu Dhabi</h3>
+        <div class="price">Adult: 295.00 AED | Child: 225.00 AED</div>
+        <div class="buttons">
+            <button class="details" onclick="openModal('yasWaterworld')">Details</button>
+            <button class="tickets">Tickets</button>
+        </div>
+    </div>
+    <div class="whatsapp">
+        <img src="https://i.ibb.co/FbHJ2jvM/1304-s.webp" alt="WhatsApp">
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <button class="close" onclick="closeModal()">×</button>
+            <div id="modal-content"></div>
+        </div>
+    </div>
+
+    <script>
+        const ticketDetails = {
+            'alexandraDhow': '<h2>Alexandra Dhow Cruise in Dubai Marina</h2><p>Adult Price: 180.00 AED</p><p>Child Price: 120.00 AED</p><p>Description: Enjoy a scenic dinner cruise along Dubai Marina.</p>',
+            'alexandraSea': '<h2>Alexandra Sea Lounge</h2><p>Adult Price: 180.00 AED</p><p>Child Price: 120.00 AED</p><p>Description: Relax at the luxurious Alexandra Sea Lounge.</p>',
+            'abuDhabiCity': '<h2>Abu Dhabi City Tour</h2><p>Adult Price: 220.00 AED</p><p>Child Price: 150.00 AED</p><p>Description: Explore the highlights of Abu Dhabi city.</p>',
+            'ayaUniverse': '<h2>AYA Universe Dubai</h2><p>Adult Price: 149.00 AED</p><p>Child Price: 99.00 AED</p><p>Description: Immersive digital art experience at AYA Universe.</p>',
+            'houseOfHype': '<h2>House of Hype</h2><p>Adult Price: 120.00 AED</p><p>Child Price: 80.00 AED</p><p>Description: Fun and interactive entertainment for all ages.</p>',
+            'modernDubaiTour': '<h2>Modern Dubai City Tour with Sightseeing Cruise</h2><p>Adult Price: 250.00 AED</p><p>Child Price: 180.00 AED</p><p>Description: Modern tour with a relaxing cruise.</p>',
+            'nightDubaiTour': '<h2>Night Dubai City Tour with Dinner Cruise</h2><p>Adult Price: 300.00 AED</p><p>Child Price: 220.00 AED</p><p>Description: Night tour with a delightful dinner cruise.</p>',
+            'fiveEmirates': '<h2>5 Emirates + Indian Ocean Tour</h2><p>Adult Price: 450.00 AED</p><p>Child Price: 350.00 AED</p><p>Description: Tour across 5 emirates and the Indian Ocean.</p>',
+            'emiratesParkZoo': '<h2>Abu Dhabi Emirates Park Zoo</h2><p>Adult Price: 80.00 AED</p><p>Child Price: 50.00 AED</p><p>Description: Visit the diverse wildlife at Emirates Park Zoo.</p>',
+            'ainDubai': '<h2>Ain Dubai Ferris Wheel</h2><p>Adult Price: 440.00 AED</p><p>Child Price: 440.00 AED</p><p>Description: Enjoy panoramic views from Ain Dubai.</p>',
+            'dubaiAquarium': '<h2>Aquarium and Underwater Zoo at the Dubai Mall</h2><p>Adult Price: 199.00 AED</p><p>Child Price: 150.00 AED</p><p>Description: Explore marine life at Dubai Mall.</p>',
+            'aquaventure': '<h2>Aquaventure Waterpark</h2><p>Adult Price: 320.00 AED</p><p>Child Price: 270.00 AED</p><p>Description: Thrilling waterpark experience at Atlantis.</p>',
+            'buggySafari': '<h2>Buggy & Quad Bike Safari in Dubai</h2><p>Adult Price: 300.00 AED</p><p>Child Price: 250.00 AED</p><p>Description: Exciting buggy and quad bike adventure.</p>',
+            'rasAlKhaimahSafari': '<h2>Desert Safari in Ras Al-Khaimah & Fujairah</h2><p>Adult Price: 350.00 AED</p><p>Child Price: 280.00 AED</p><p>Description: Desert safari across Ras Al-Khaimah and Fujairah.</p>',
+            'dinnerSky': '<h2>Dinner in the Sky</h2><p>Adult Price: 799.00 AED</p><p>Description: Unique dining experience in the sky.</p>',
+            'dolphinBay': '<h2>Dolphin Bay at Atlantis the Palm</h2><p>Adult Price: 825.00 AED</p><p>Child Price: 649.00 AED</p><p>Description: Swim and interact with dolphins.</p>',
+            'crocodilePark': '<h2>Dubai Crocodile Park</h2><p>Adult Price: 90.00 AED</p><p>Child Price: 60.00 AED</p><p>Description: Visit the crocodile sanctuary in Dubai.</p>',
+            'dolphinarium': '<h2>Dubai Dolphinarium</h2><p>Adult Price: 120.00 AED</p><p>Child Price: 80.00 AED</p><p>Description: Enjoy dolphin and seal shows.</p>',
+            'dubaiFrame': '<h2>Dubai Frame</h2><p>Adult Price: 50.00 AED</p><p>Child Price: 30.00 AED</p><p>Description: Panoramic views from the iconic Dubai Frame.</p>',
+            'miracleGarden': '<h2>Dubai Miracle Garden</h2><p>Adult Price: 75.00 AED</p><p>Child Price: 55.00 AED</p><p>Description: Explore the stunning flower garden.</p>',
+            'ferrariWorld': '<h2>Ferrari World Abu Dhabi Theme Park</h2><p>Adult Price: 345.00 AED</p><p>Description: Thrilling rides at Ferrari World.</p>',
+            'helicopterAbu': '<h2>Helicopter Flight Abu Dhabi</h2><p>Adult Price: 700.00 AED</p><p>Description: Aerial tour over Abu Dhabi.</p>',
+            'helicopterDubaiPolice': '<h2>Helicopter Flight from Dubai Police Academy by HeliDubai</h2><p>Adult Price: 710.00 AED</p><p>Child Price: 710.00 AED</p><p>Description: Helicopter tour from Dubai Police Academy.</p>',
+            'helicopterPalm': '<h2>Helicopter flight from the Palm Island, Dubai</h2><p>Adult Price: 715.00 AED</p><p>Description: Scenic flight over Palm Island.</p>',
+            'heritageSafari': '<h2>Heritage Safari</h2><p>Adult Price: 695.00 AED</p><p>Child Price: 695.00 AED</p><p>Description: Cultural desert safari experience.</p>',
+            'hotAirBalloon': '<h2>Hot Air Balloon Flight in Dubai</h2><p>Adult Price: 1099.00 AED</p><p>Child Price: 940.00 AED</p><p>Description: Scenic hot air balloon ride over Dubai.</p>',
+            'imgWorlds': '<h2>IMG Worlds of Adventure Theme Park</h2><p>Adult Price: 365.00 AED</p><p>Child Price: 365.00 AED</p><p>Description: Adventure park with thrilling rides.</p>',
+            'insideBurj': '<h2>Inside Burj Al Arab</h2><p>Adult Price: 249.00 AED</p><p>Description: Exclusive tour inside Burj Al Arab.</p>',
+            'kidZania': '<h2>KidZania Dubai</h2><p>Adult Price: 100.00 AED</p><p>Child Price: 90.00 AED</p><p>Description: Educational role-play city for kids.</p>',
+            'laPerle': '<h2>La Perle Show</h2><p>Adult Price: 270.00 AED</p><p>Description: Stunning live performance by La Perle.</p>',
+            'legoland': '<h2>LEGOLAND Dubai Theme Park</h2><p>Adult Price: 295.00 AED</p><p>Child Price: 295.00 AED</p><p>Description: Fun theme park for LEGO enthusiasts.</p>',
+            'legolandWater': '<h2>LEGOLAND Waterpark</h2><p>Adult Price: 295.00 AED</p><p>Child Price: 295.00 AED</p><p>Description: Exciting waterpark with LEGO themes.</p>',
+            'lostChambers': '<h2>Lost Chambers Aquarium</h2><p>Adult Price: 135.00 AED</p><p>Child Price: 95.00 AED</p><p>Description: Explore the underwater ruins.</p>',
+            'lotusRoyale': '<h2>Lotus Royale Dinner Cruise</h2><p>Adult Price: 249.00 AED</p><p>Description: Elegant dinner cruise on the water.</p>',
+            'louvre': '<h2>Louvre Museum Abu Dhabi</h2><p>Adult Price: 60.00 AED</p><p>Child Price: 30.00 AED</p><p>Description: World-class art and culture museum.</p>',
+            'madameTussauds': '<h2>Madame Tussauds Dubai</h2><p>Adult Price: 130.00 AED</p><p>Description: Meet lifelike wax figures of celebrities.</p>',
+            'motionGate': '<h2>Motion Gate Dubai Theme Park</h2><p>Adult Price: 295.00 AED</p><p>Child Price: 295.00 AED</p><p>Description: Hollywood-inspired theme park rides.</p>',
+            'musandam': '<h2>Musandam Day Trip</h2><p>Adult Price: 200.00 AED</p><p>Child Price: 150.00 AED</p><p>Description: Scenic day trip to Musandam.</p>',
+            'museumFuture': '<h2>Museum of the Future</h2><p>Adult Price: 399.00 AED</p><p>Child Price: 399.00 AED</p><p>Description: Innovative exhibits about the future.</p>',
+            'nationalAquarium': '<h2>National Aquarium Abu Dhabi</h2><p>Adult Price: 110.00 AED</p><p>Child Price: 70.00 AED</p><p>Description: Largest indoor aquarium in the region.</p>',
+            'qasrAlHosn': '<h2>Qasr Al Hosn</h2><p>Adult Price: 25.00 AED</p><p>Child Price: 15.00 AED</p><p>Description: Historical fort and cultural site.</p>',
+            'qasrAlWatan': '<h2>Qasr Al Watan, Royal Palace</h2><p>Adult Price: 60.00 AED</p><p>Child Price: 30.00 AED</p><p>Description: Grand palace with cultural exhibits.</p>',
+            'realMadrid': '<h2>Real Madrid World</h2><p>Adult Price: 295.00 AED</p><p>Child Price: 295.00 AED</p><p>Description: Soccer-themed park with attractions.</p>',
+            'seaWorld': '<h2>Sea World Abu Dhabi</h2><p>Adult Price: 375.00 AED</p><p>Description: Marine life education and shows.</p>',
+            'shindhaga': '<h2>Shindhaga Museum</h2><p>Adult Price: 30.00 AED</p><p>Child Price: 20.00 AED</p><p>Description: Cultural museum showcasing history.</p>',
+            'skiDubai': '<h2>Ski Dubai</h2><p>Adult Price: 200.00 AED</p><p>Child Price: 160.00 AED</p><p>Description: Indoor skiing and snow activities.</p>',
+            'skyView': '<h2>Sky View Dubai</h2><p>Adult Price: 100.00 AED</p><p>Child Price: 70.00 AED</p><p>Description: Thrilling ride with city views.</p>',
+            'teamLab': '<h2>TeamLab Phenomena</h2><p>Adult Price: 150.00 AED</p><p>Child Price: 100.00 AED</p><p>Description: Interactive digital art installation.</p>',
+            'greenPlanet': '<h2>The Green Planet</h2><p>Adult Price: 95.00 AED</p><p>Child Price: 70.00 AED</p><p>Description: Indoor tropical rainforest experience.</p>',
+            'palmMonorail': '<h2>The Palm Monorail</h2><p>Adult Price: 25.00 AED</p><p>Child Price: 15.00 AED</p><p>Description: Scenic monorail ride on The Palm.</p>',
+            'viewAtPalm': '<h2>The View at The Palm</h2><p>Adult Price: 90.00 AED</p><p>Child Price: 70.00 AED</p><p>Description: Observation deck with stunning views.</p>',
+            'warnerBros': '<h2>Warner Bros. World Abu Dhabi Theme Park</h2><p>Adult Price: 350.00 AED</p><p>Child Price: 300.00 AED</p><p>Description: Theme park with Warner Bros. characters.</p>',
+            'wildWadi': '<h2>Wild Wadi Waterpark, Dubai</h2><p>Adult Price: 269.00 AED</p><p>Description: Exciting waterpark with slides.</p>',
+            'yasIsland': '<h2>Yas Island Multi Day, Multi Park Ticket (Ferrari, Warner, Yas & SeaWorld)</h2><p>Adult Price: 475.00 AED</p><p>Child Price: 475.00 AED</p><p>Description: Multi-day access to Yas Island parks.</p>',
+            'yasWaterworld': '<h2>Yas Waterworld, Abu Dhabi</h2><p>Adult Price: 295.00 AED</p><p>Child Price: 225.00 AED</p><p>Description: Fun waterpark on Yas Island.</p>'
+        };
+
+        function openModal(ticketId) {
+            const modal = document.getElementById('modal');
+            const modalContent = document.getElementById('modal-content');
+            modal.style.display = 'flex';
+            modalContent.innerHTML = ticketDetails[ticketId] || '<p>Details not available.</p>';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('modal');
+            modal.style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('modal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        };
+    </script>
+</body>
+</html>

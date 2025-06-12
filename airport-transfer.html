@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premier site for desert safari in Dubai, evening desert safari, overnight desert safari, Dubai city tour, dinner cruises, and airport transfers. Book reliable and comfortable Dubai International Airport transfers at affordable prices.">
+    <meta name="keywords" content="desert safari Dubai, Dubai desert safari, desert safari UAE, Dubai city tour, dhow cruise dinner, desert safari cost, Dubai city tours, prices of desert safari in Dubai, Dubai desert, dune bashing, sand ski, camel ride, overnight desert safari, Abu Dhabi city tours, Dubai airport transfer">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="RASDEALS">
+    <link rel="canonical" href="http://www.rasdeals.com/airport-transfer.html">
+    
+    <!-- Favicons -->
+    <link href="img/favicon.png" rel="icon">
+    <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/magnific-popup.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/simplelightbox@2.10.3/dist/simple-lightbox.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --primary: #D4A017; /* Gold for luxury and trust */
+            --secondary: #1A3C34; /* Deep teal for sophistication */
+            --accent: #F4E4BC; /* Light gold for warmth */
+            --text: #333333; /* Dark gray for readability */
+            --white: #FFFFFF;
+            --hover: #C68B00; /* Darker gold for hover effects */
+            --whatsapp-green: #25D366; /* WhatsApp green */
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            background-color: var(--white);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: linear-gradient(to right, var(--secondary), var(--primary));
+            color: var(--white);
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .nav-left {
+            display: flex;
+            align-items: center;
+            margin-left: -2rem;
+        }
+
+        #logo img {
+            height: 60px;
+            transition: transform 0.3s ease;
+            margin-right: 1rem;
+        }
+
+        #logo img:hover {
+            transform: scale(1.1);
+        }
+
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+        }
+
+        .nav-menu li {
+            margin-left: 2rem;
+            position: relative;
+            white-space: nowrap;
+        }
+
+        .nav-menu li a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu li a:hover {
+            color: var(--accent);
+        }
+
+        .nav-menu .menu-has-children {
+            position: relative;
+        }
+
+        .nav-menu .menu-has-children:hover .dropdown {
+            display: block;
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: var(--white);
+            color: var(--text);
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            min-width: 200px;
+            padding: 0.5rem 0;
+            z-index: 1000;
+        }
+
+        .dropdown li {
+            margin: 0;
+            white-space: nowrap;
+        }
+
+        .dropdown li a {
+            color: var(--text);
+            padding: 0.5rem 1rem;
+            display: block;
+        }
+
+        .dropdown li a:hover {
+            background: var(--accent);
+            color: var(--secondary);
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .contact-info a {
+            color: var(--white);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .contact-info .email-btn {
+            background: var(--secondary);
+        }
+
+        .contact-info .email-btn:hover {
+            background: var(--hover);
+            color: var(--white);
+        }
+
+        .contact-info .whatsapp-btn {
+            background: var(--whatsapp-green);
+        }
+
+        .contact-info .whatsapp-btn:hover {
+            background: #20b356;
+            color: var(--white);
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            color: var(--white);
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--secondary);
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .nav-menu li {
+                margin: 0.5rem 0;
+            }
+
+            .nav-left {
+                margin-left: 0;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 0.5rem;
+                margin-top: 1rem;
+            }
+        }
+
+        /* Package Sections (Airport Transfers) */
+        .package-section {
+            padding: 40px 20px;
+            text-align: center;
+            background: antiquewhite;
+        }
+
+        .package-section h2 {
+            font-size: 32px;
+            color: var(--secondary);
+            font-weight: bold;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .packages-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin: 0 auto;
+            padding: 20px 10px;
+        }
+
+        .package {
+            width: 100%;
+            max-width: 350px;
+            border: 2px solid var(--primary);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease;
+        }
+
+        .package:hover {
+            transform: scale(1.05);
+        }
+
+        .package-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .package-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .package-details {
+            padding: 15px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            min-height: 300px;
+        }
+
+        .package-details h3 {
+            font-size: 20px;
+            margin: 0 0 10px 0;
+            min-height: 48px;
+        }
+
+        .package-info {
+            padding: 0;
+            margin: 0 0 15px 0;
+            line-height: 1.5;
+            list-style-type: none;
+            flex-grow: 1;
+            text-align: left;
+        }
+
+        .package-info li {
+            margin-bottom: 8px;
+            padding-left: 0;
+        }
+
+        .package-info .tick-item {
+            position: relative;
+            padding-left: 24px;
+        }
+
+        .package-info .tick-item:before {
+            content: "\2714";
+            color: var(--primary);
+            position: absolute;
+            left: 0;
+            top: 2px;
+            font-size: 16px;
+            border: none;
+            outline: none;
+            text-decoration: none;
+            margin-right: 8px;
+            display: inline-block;
+            width: 16px;
+            text-align: center;
+        }
+
+        .duration-highlight {
+            color: var(--secondary);
+            font-weight: bold;
+            background-color: var(--accent);
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+
+        .price-button-group {
+            margin-top: auto;
+        }
+
+        .price-button-group p {
+            margin: 0 0 15px 0;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 10px;
+        }
+
+        .book-now-button {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            text-align: center;
+            flex: 1;
+            transition: background-color 0.3s;
+        }
+
+        .book-now-button:hover {
+            background-color: var(--hover);
+        }
+
+        .whatsapp-button {
+            background-color: var(--whatsapp-green);
+            color: var(--white);
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            text-align: center;
+            flex: 1;
+            transition: background-color 0.3s;
+        }
+
+        .whatsapp-button:hover {
+            background-color: #1ebe56;
+        }
+
+        /* Route Table */
+        .price-list {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .route-prices {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+
+        .route-prices th, .route-prices td {
+            padding: 10px;
+            border: 1px solid var(--primary);
+            text-align: left;
+        }
+
+        .route-prices th {
+            background-color: var(--secondary);
+            color: var(--white);
+            font-weight: bold;
+        }
+
+        .route-prices tr:nth-child(even) {
+            background-color: var(--accent);
+        }
+
+        /* Package Section Responsive Styles */
+        @media (max-width: 1100px) {
+            .packages-container {
+                gap: 15px;
+            }
+            .package {
+                max-width: 320px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .packages-container {
+                flex-direction: column;
+                align-items: stretch;
+                padding: 2px 0;
+                width: 100%;
+                margin: 0;
+            }
+            .package {
+                width: 100%;
+                max-width: none;
+                margin: 0;
+            }
+            .button-container {
+                flex-direction: column;
+            }
+            .book-now-button, .whatsapp-button {
+                width: 100%;
+            }
+            .package-section h2 {
+                font-size: 26px;
+            }
+            .route-prices th, .route-prices td {
+                font-size: 14px;
+                padding: 8px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .package-details h3 {
+                font-size: 18px;
+            }
+            .package-info li {
+                font-size: 14px;
+            }
+            .price-button-group p {
+                font-size: 16px;
+            }
+        }
+    </style>
+
+    <!-- Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KQN7F15NQV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-KQN7F15NQV');
+        gtag('event', 'conversion', { 'send_to': 'AW-11413109569/MJhaCKzgjvcYEMH2mMIq' });
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w,d,s,l,i){
+            w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+            var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+            j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+            f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-5KJ8DVHB');
+    </script>
+    <!-- Meta Pixel -->
+    <script>
+        !function(f,b,e,v,n,t,s){
+            if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];
+            t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)
+        }(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '389313877271978');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=389313877271978&ev=PageView&noscript=1" /></noscript>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5KJ8DVHB" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <div id="google_translate_element"></div>
+
+    <header id="header">
+        <div class="navbar">
+            <div class="nav-left">
+                <div id="logo">
+                    <a href="index.html"><img src="img/logo.webp" alt="RASDEALS Logo"></a>
+                </div>
+                <nav>
+                    <button class="menu-toggle"><i class="fa fa-bars"></i></button>
+                    <ul class="nav-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li class="menu-has-children">
+                            <a href="#">Desert Safari</a>
+                            <ul class="dropdown">
+                                <li><a href="desert-safari-dubai.html">Evening Desert Safari</a></li>
+                                <li><a href="morning-desert-safari.html">Morning Desert Safari</a></li>
+                                <li><a href="overnight-safari-dinner.html">Overnight Desert Safari</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="city-tours.html">City Tours</a></li>
+                        <li><a href="water-activites.html">Water Activities</a></li>
+                        <li><a href="abudhabi.html">Abu Dhabi City Tours</a></li>
+                        <li><a href="airport-transfer.html">Airport Transfer</a></li>
+                        <li><a href="dune-buggy.html">Dune Buggy</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="contact-info">
+                <a href="mailto:rasahraloqmanbooking@gmail.com" class="email-btn"><i class="fa fa-envelope-o"></i> Email Us</a>
+                <a href="https://wa.me/+971529817405" target="_blank" class="whatsapp-btn"><i class="fa fa-whatsapp"></i> WhatsApp</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Airport Transfer Packages Section -->
+    <section class="package-section" itemscope itemtype="http://schema.org/ProductGroup">
+        <meta itemprop="name" content="Dubai International Airport Private Taxi Transfer">
+        <meta itemprop="description" content="Reliable and comfortable private airport transfers from Dubai International Airport (DXB) to various destinations. Choose from minivans, SUVs, and luxury buses with door-step pickup and drop-off.">
+        <h2>Dubai International Airport Private Taxi Transfer</h2>
+        <div class="packages-container">
+            <!-- Card 1: Minivan -->
+            <article class="package" itemscope itemtype="http://schema.org/Product">
+                <meta itemprop="name" content="Dubai Airport Minivan Transfer">
+                <meta itemprop="description" content="Private minivan transfer from Dubai International Airport, ideal for small groups or families, with door-step pickup and drop-off.">
+                <meta itemprop="sku" content="DXB-MINIVAN">
+                <div class="package-image">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/2019_Chrysler_Pacifica_Touring_L%2C_front_7.4.19.jpg" alt="Minivan for Dubai Airport Transfer" itemprop="image">
+                </div>
+                <div class="package-details">
+                    <h3 itemprop="name">Minivan Transfer</h3>
+                    <ul class="package-info">
+                        <li class="tick-item">Private Minivan</li>
+                        <li class="tick-item">Ideal for Small Groups or Families</li>
+                        <li class="tick-item">Comfortable Seating</li>
+                        <li class="tick-item">Luggage Assistance</li>
+                        <li class="tick-item">Pick & Drop from Airport/Hotel</li>
+                        <li class="duration-highlight">Routes: DXB to Deira, Bur Dubai, Barsha, Marina, Palm</li>
+                    </ul>
+                    <div class="price-button-group" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                        <meta itemprop="priceCurrency" content="AED">
+                        <meta itemprop="availability" content="http://schema.org/InStock">
+                        <p>Price: See Route Table Below</p>
+                        <div class="button-container">
+                            <a href="https://safaricontractors.com/submit-airport-ras.php" class="book-now-button" itemprop="url">Book Now</a>
+                            <a href="https://wa.me/+971529817405" class="whatsapp-button" rel="nofollow">WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 2: SUV -->
+            <article class="package" itemscope itemtype="http://schema.org/Product">
+                <meta itemprop="name" content="Dubai Airport SUV Transfer">
+                <meta itemprop="description" content="Private SUV transfer from Dubai International Airport, offering luxury and comfort for small groups, with door-step pickup and drop-off.">
+                <meta itemprop="sku" content="DXB-SUV">
+                <div class="package-image">
+                    <img src="https://images.ctfassets.net/c9t6u0qhbv9e/2015NissanArmadaPreviewsummary/fea7def10acdbfe505ac55dd54dc5244/2015_Nissan_Armada_Preview_summaryImage.jpeg" alt="SUV for Dubai Airport Transfer" itemprop="image">
+                </div>
+                <div class="package-details">
+                    <h3 itemprop="name">SUV Transfer</h3>
+                    <ul class="package-info">
+                        <li class="tick-item">Private Luxury SUV</li>
+                        <li class="tick-item">Premium Comfort for Small Groups</li>
+                        <li class="tick-item">Spacious Interior</li>
+                        <li class="tick-item">Luggage Assistance</li>
+                        <li class="tick-item">Pick & Drop from Airport/Hotel</li>
+                        <li class="duration-highlight">Routes: DXB to Deira, Bur Dubai, Barsha, Marina, Palm</li>
+                    </ul>
+                    <div class="price-button-group" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                        <meta itemprop="priceCurrency" content="AED">
+                        <meta itemprop="availability" content="http://schema.org/InStock">
+                        <p>Price: See Route Table Below</p>
+                        <div class="button-container">
+                            <a href="https://safaricontractors.com/submit-airport-ras.php" class="book-now-button" itemprop="url">Book Now</a>
+                            <a href="https://wa.me/+971529817405" class="whatsapp-button" rel="nofollow">WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 3: Luxury Buses -->
+            <article class="package" itemscope itemtype="http://schema.org/Product">
+                <meta itemprop="name" content="Dubai Airport Luxury Bus Transfer">
+                <meta itemprop="description" content="Private luxury bus transfer from Dubai International Airport, perfect for large groups, with door-step pickup and drop-off.">
+                <meta itemprop="sku" content="DXB-LUXBUS">
+                <div class="package-image">
+                    <img src="https://www.busrentdubai.ae/wp-content/uploads/2018/12/35-seats-and-33-seats-luxury-bus-rental-in-Dubai-and-Sharjah.webp" alt="Luxury Bus for Dubai Airport Transfer" itemprop="image">
+                </div>
+                <div class="package-details">
+                    <h3 itemprop="name">Luxury Bus Transfer</h3>
+                    <ul class="package-info">
+                        <li class="tick-item">Private Luxury Bus</li>
+                        <li class="tick-item">Ideal for Large Groups</li>
+                        <li class="tick-item">Spacious and Comfortable</li>
+                        <li class="tick-item">Luggage Assistance</li>
+                        <li class="tick-item">Pick & Drop from Airport/Hotel</li>
+                        <li class="duration-highlight">Routes: DXB to Deira, Bur Dubai, Barsha, Marina, Palm</li>
+                    </ul>
+                    <div class="price-button-group" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                        <meta itemprop="priceCurrency" content="AED">
+                        <meta itemprop="availability" content="http://schema.org/InStock">
+                        <p>Price: See Route Table Below</p>
+                        <div class="button-container">
+                            <a href="https://safaricontractors.com/submit-airport-ras.php" class="book-now-button" itemprop="url">Book Now</a>
+                            <a href="https://wa.me/+971529817405" class="whatsapp-button" rel="nofollow">WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="price-list">
+            <h2 style="text-align: center;">67 Different Routes in Dubai International Airport</h2>
+            <table class="route-prices">
+                <thead>
+                    <tr>
+                        <th>Route</th>
+                        <th>Price (AED)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>DXB to Deira & Bur Dubai Hotels</td>
+                        <td>150 to 170 AED</td>
+                    </tr>
+                    <tr>
+                        <td>DXB to Barsha & Marina Hotels</td>
+                        <td>200 to 220 AED</td>
+                    </tr>
+                    <tr>
+                        <td>DXB to Palm Hotels</td>
+                        <td>220 to 250 AED</td>
+                    </tr>
+                    <tr>
+                        <td>Deira & Bur Dubai to Sharjah</td>
+                        <td>260 to 280 AED</td>
+                    </tr>
+                    <tr>
+                        <td>Barsha & Marina to Sharjah</td>
+                        <td>290 to 300 AED</td>
+                    </tr>
+                    <tr>
+                        <td>Palm to Sharjah</td>
+                        <td>320 to 330 AED</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/jquery.magnific-popup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simplelightbox@2.10.3/dist/simple-lightbox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/easing@1.4.1/easing.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/superfish@1.7.10/dist/js/superfish.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sticky-js@1.2.0/dist/sticky.min.js"></script>
+
+    <!-- Google Translate -->
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script>
+        function googleTranslateElementInit() {
+            const userLang = navigator.language || navigator.userLanguage;
+            const langMap = {
+                'en': 'en', 'es': 'es', 'fr': 'fr', 'de': 'de', 'zh': 'zh-CN',
+                'ko': 'ko', 'ja': 'ja', 'it': 'it', 'ru': 'ru'
+            };
+            const defaultLang = langMap[userLang.slice(0, 2)] || 'en';
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,es,fr,de,zh-CN,ko,ja,it,ru',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_translate_element');
+            const dropdown = document.querySelector('#google_translate_element select');
+            if (dropdown) {
+                dropdown.value = defaultLang;
+                dropdown.dispatchEvent(new Event('change'));
+            }
+        }
+    </script>
+
+    <!-- Hamburger Menu Toggle -->
+    <script>
+        $(document).ready(function() {
+            $('.menu-toggle').click(function() {
+                $('.nav-menu').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+</html>

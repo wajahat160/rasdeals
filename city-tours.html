@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premier site for desert safari in Dubai, evening desert safari, overnight desert safari, Dubai city tour, dinner cruises, and city tours. Explore Dubai, Abu Dhabi, Hatta, Khor Fakkan, and Musandam with our exclusive tour packages.">
+    <meta name="keywords" content="desert safari Dubai, Dubai desert safari, desert safari UAE, Dubai city tour, dhow cruise dinner, desert safari cost, Dubai city tours, prices of desert safari in Dubai, Dubai desert, dune bashing, sand ski, camel ride, overnight desert safari, Abu Dhabi city tours, Hatta tour, Khor Fakkan tour, Musandam tour">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="RASDEALS">
+    <link rel="canonical" href="http://www.rasdeals.com/city-tours.html">
+    
+    <!-- Favicons -->
+    <link href="img/favicon.png" rel="icon">
+    <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/magnific-popup.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/simplelightbox@2.10.3/dist/simple-lightbox.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --primary: #D4A017; /* Gold for luxury and trust */
+            --secondary: #1A3C34; /* Deep teal for sophistication */
+            --accent: #F4E4BC; /* Light gold for warmth */
+            --text: #333333; /* Dark gray for readability */
+            --white: #FFFFFF;
+            --hover: #C68B00; /* Darker gold for hover effects */
+            --whatsapp-green: #25D366; /* WhatsApp green */
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            background-color: var(--white);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: linear-gradient(to right, var(--secondary), var(--primary));
+            color: var(--white);
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .nav-left {
+            display: flex;
+            align-items: center;
+            margin-left: -2rem;
+        }
+
+        #logo img {
+            height: 60px;
+            transition: transform 0.3s ease;
+            margin-right: 1rem;
+        }
+
+        #logo img:hover {
+            transform: scale(1.1);
+        }
+
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+        }
+
+        .nav-menu li {
+            margin-left: 2rem;
+            position: relative;
+            white-space: nowrap;
+        }
+
+        .nav-menu li a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu li a:hover {
+            color: var(--accent);
+        }
+
+        .nav-menu .menu-has-children {
+            position: relative;
+        }
+
+        .nav-menu .menu-has-children:hover .dropdown {
+            display: block;
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: var(--white);
+            color: var(--text);
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            min-width: 200px;
+            padding: 0.5rem 0;
+            z-index: 1000;
+        }
+
+        .dropdown li {
+            margin: 0;
+            white-space: nowrap;
+        }
+
+        .dropdown li a {
+            color: var(--text);
+            padding: 0.5rem 1rem;
+            display: block;
+        }
+
+        .dropdown li a:hover {
+            background: var(--accent);
+            color: var(--secondary);
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .contact-info a {
+            color: var(--white);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .contact-info .email-btn {
+            background: var(--secondary);
+        }
+
+        .contact-info .email-btn:hover {
+            background: var(--hover);
+            color: var(--white);
+        }
+
+        .contact-info .whatsapp-btn {
+            background: var(--whatsapp-green);
+        }
+
+        .contact-info .whatsapp-btn:hover {
+            background: #20b356;
+            color: var(--white);
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            color: var(--white);
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--secondary);
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .nav-menu li {
+                margin: 0.5rem 0;
+            }
+
+            .nav-left {
+                margin-left: 0;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 0.5rem;
+                margin-top: 1rem;
+            }
+        }
+
+        /* Package Sections (City Tours) */
+        .package-section {
+            padding: 40px 20px;
+            text-align: center;
+            background: antiquewhite;
+        }
+
+        .package-section h2 {
+            font-size: 32px;
+            color: var(--secondary);
+            font-weight: bold;
+            margin-bottom: 40px;
+        }
+
+        .packages-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin: 0 auto;
+            padding: 20px 10px;
+        }
+
+        .package {
+            width: 100%;
+            max-width: 350px;
+            border: 2px solid var(--primary);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease;
+        }
+
+        .package:hover {
+            transform: scale(1.05);
+        }
+
+        .package-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .package-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .package-details {
+            padding: 15px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            min-height: 300px;
+        }
+
+        .package-details h3 {
+            font-size: 20px;
+            margin: 0 0 10px 0;
+            min-height: 48px;
+        }
+
+        .package-info {
+            padding: 0;
+            margin: 0 0 15px 0;
+            line-height: 1.5;
+            list-style-type: none;
+            flex-grow: 1;
+            text-align: left;
+        }
+
+        .package-info li {
+            margin-bottom: 8px;
+            padding-left: 0;
+        }
+
+        .package-info .tick-item {
+            position: relative;
+            padding-left: 24px;
+        }
+
+        .package-info .tick-item:before {
+            content: "\2714";
+            color: var(--primary);
+            position: absolute;
+            left: 0;
+            top: 2px;
+            font-size: 16px;
+            border: none;
+            outline: none;
+            text-decoration: none;
+            margin-right: 8px;
+            display: inline-block;
+            width: 16px;
+            text-align: center;
+        }
+
+        .duration-highlight {
+            color: var(--secondary);
+            font-weight: bold;
+            background-color: var(--accent);
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+
+        .price-button-group {
+            margin-top: auto;
+        }
+
+        .price-button-group p {
+            margin: 0 0 15px 0;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 10px;
+        }
+
+        .book-now-button {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            text-align: center;
+            flex: 1;
+            transition: background-color 0.3s;
+        }
+
+        .book-now-button:hover {
+            background-color: var(--hover);
+        }
+
+        .whatsapp-button {
+            background-color: var(--whatsapp-green);
+            color: var(--white);
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            text-align: center;
+            flex: 1;
+            transition: background-color 0.3s;
+        }
+
+        .whatsapp-button:hover {
+            background-color: #1ebe56;
+        }
+
+        /* Package Section Responsive Styles */
+        @media (max-width: 1100px) {
+            .packages-container {
+                gap: 15px;
+            }
+            .package {
+                max-width: 320px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .packages-container {
+                flex-direction: column;
+                align-items: stretch;
+                padding: 2px 0;
+                width: 100%;
+                margin: 0;
+            }
+            .package {
+                width: 100%;
+                max-width: none;
+                margin: 0;
+            }
+            .button-container {
+                flex-direction: column;
+            }
+            .book-now-button, .whatsapp-button {
+                width: 100%;
+            }
+            .package-section h2 {
+                font-size: 26px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .package-details h3 {
+                font-size: 18px;
+            }
+            .package-info li {
+                font-size: 14px;
+            }
+            .price-button-group p {
+                font-size: 16px;
+            }
+        }
+    </style>
+
+    <!-- Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KQN7F15NQV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-KQN7F15NQV');
+        gtag('event', 'conversion', { 'send_to': 'AW-11413109569/MJhaCKzgjvcYEMH2mMIq' });
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w,d,s,l,i){
+            w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+            var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+            j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+            f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-5KJ8DVHB');
+    </script>
+    <!-- Meta Pixel -->
+    <script>
+        !function(f,b,e,v,n,t,s){
+            if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];
+            t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)
+        }(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '389313877271978');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=389313877271978&ev=PageView&noscript=1" /></noscript>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5KJ8DVHB" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <div id="google_translate_element"></div>
+
+    <header id="header">
+        <div class="navbar">
+            <div class="nav-left">
+                <div id="logo">
+                    <a href="index.html"><img src="img/logo.webp" alt="RASDEALS Logo"></a>
+                </div>
+                <nav>
+                    <button class="menu-toggle"><i class="fa fa-bars"></i></button>
+                    <ul class="nav-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li class="menu-has-children">
+                            <a href="#">Desert Safari</a>
+                            <ul class="dropdown">
+                                <li><a href="desert-safari-dubai.html">Evening Desert Safari</a></li>
+                                <li><a href="morning-desert-safari.html">Morning Desert Safari</a></li>
+                                <li><a href="overnight-safari-dinner.html">Overnight Desert Safari</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="city-tours.html">City Tours</a></li>
+                        <li><a href="water-activites.html">Water Activities</a></li>
+                        <li><a href="abudhabi.html">Abu Dhabi City Tours</a></li>
+                        <li><a href="airport-transfer.html">Airport Transfer</a></li>
+                        <li><a href="dune-buggy.html">Dune Buggy</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="contact-info">
+                <a href="mailto:rasahraloqmanbooking@gmail.com" class="email-btn"><i class="fa fa-envelope-o"></i> Email Us</a>
+                <a href="https://wa.me/+971529817405" target="_blank" class="whatsapp-btn"><i class="fa fa-whatsapp"></i> WhatsApp</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- City Tours Packages Section -->
+    <section class="package-section" itemscope itemtype="http://schema.org/ProductGroup">
+        <meta itemprop="name" content="City Tours Packages">
+        <meta itemprop="description" content="Explore Dubai, Abu Dhabi, Hatta, Khor Fakkan, and Musandam with our exclusive city tour packages. Choose from private luxury vehicles or per-person sharing tours, with hotel/home pickup and iconic landmarks.">
+        <h2>City Tours Packages</h2>
+        <div class="packages-container">
+            <!-- Card 1: Dubai City Tour -->
+            <article class="package" itemscope itemtype="http://schema.org/Product">
+                <meta itemprop="name" content="Dubai City Tour">
+                <meta itemprop="description" content="Explore Dubai with a luxury 4x4 tour, visiting Palm Island, Dubai Museum, Burj Khalifa, Gold Souq, Dubai Creek, Dubai Marina, Jumeirah Beach, and more, with pickup from home or hotel.">
+                <meta itemprop="sku" content="DCT-600">
+                <div class="package-image">
+                    <img src="img/dbt.webp" alt="Dubai City Tour featuring Burj Khalifa and Dubai Marina" itemprop="image">
+                </div>
+                <div class="package-details">
+                    <h3 itemprop="name">Dubai City Tour</h3>
+                    <ul class="package-info">
+                        <li class="tick-item">Pick & Drop From Your Home/Hotel by Luxury 4×4 Vehicles</li>
+                        <li class="tick-item">Visit Centrepiece of Palm Island Man-Made Island</li>
+                        <li class="tick-item">Visit Dubai Museum</li>
+                        <li class="tick-item">Outside Visit of Burj Khalifa, World’s Tallest Building</li>
+                        <li class="tick-item">Visit Gold Souq Dubai</li>
+                        <li class="tick-item">Visit Dubai Creek</li>
+                        <li class="tick-item">Visit Biggest Mall & Aquarium in the World</li>
+                        <li class="tick-item">Visit Dubai Marina</li>
+                        <li class="tick-item">Visit Jumeirah Beach & Jumeirah Beach Hotel’s Five-Star Resort</li>
+                        <li class="tick-item">Views of White Marble Dome & Minarets of Jumeirah Mosque</li>
+                        <li class="tick-item">Visit Madinat Jumeirah</li>
+                        <li class="tick-item">Outside Visit of Burj Al Arab, World’s Only Seven-Star Hotel</li>
+                        <li class="tick-item">Visit Zabeel Palace</li>
+                    </ul>
+                    <div class="price-button-group" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                        <meta itemprop="priceCurrency" content="AED">
+                        <meta itemprop="price" content="600">
+                        <meta itemprop="availability" content="http://schema.org/InStock">
+                        <p>AED 600 Private Luxury Car<br>AED 150 Per Person</p>
+                        <div class="button-container">
+                            <a href="https://dubaidesertdeals.com/form/" class="book-now-button" itemprop="url">Book Now</a>
+                            <a href="https://wa.me/+971529817405" class="whatsapp-button" rel="nofollow">WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 2: Abu Dhabi City Tour -->
+            <article class="package" itemscope itemtype="http://schema.org/Product">
+                <meta itemprop="name" content="Abu Dhabi City Tour">
+                <meta itemprop="description" content="Discover Abu Dhabi with a luxury 4x4 Land Cruiser, visiting Sheikh Zayed Grand Mosque, Emirates Palace, Presidential Palace, Dates Market, and more, with pickup from home or hotel.">
+                <meta itemprop="sku" content="ACT-600">
+                <div class="package-image">
+                    <img src="img/adt.webp" alt="Abu Dhabi City Tour featuring Sheikh Zayed Grand Mosque" itemprop="image">
+                </div>
+                <div class="package-details">
+                    <h3 itemprop="name">Abu Dhabi City Tour</h3>
+                    <ul class="package-info">
+                        <li class="tick-item">Pick & Drop From Your Home/Hotel by Luxury 4×4 Land Cruiser</li>
+                        <li class="tick-item">Sheikh Zayed Grand Mosque</li>
+                        <li class="tick-item">Emirates Palace Hotel & Presidential Palace Heritage Village</li>
+                        <li class="tick-item">Museum of Abu Dhabi (Zayed National Museum)</li>
+                        <li class="tick-item">Lunch at Marina Mall or Heritage Village (Extra Cost)</li>
+                        <li class="tick-item">Miraj Islamic Art Gallery</li>
+                        <li class="tick-item">Dates Market</li>
+                        <li class="tick-item">Drive through Corniche Road</li>
+                        <li class="tick-item">Yas Island Ferrari World</li>
+                    </ul>
+                    <div class="price-button-group" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                        <meta itemprop="priceCurrency" content="AED">
+                        <meta itemprop="price" content="600">
+                        <meta itemprop="availability" content="http://schema.org/InStock">
+                        <p>AED 600 Private Luxury 4×4 and SUV Cars<br>AED 120 Per Person</p>
+                        <div class="button-container">
+                            <a href="https://dubaidesertdeals.com/form/" class="book-now-button" itemprop="url">Book Now</a>
+                            <a href="https://wa.me/+971529817405" class="whatsapp-button" rel="nofollow">WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 3: Hatta Mountain Tour -->
+            <article class="package" itemscope itemtype="http://schema.org/Product">
+                <meta itemprop="name" content="Hatta Mountain Tour">
+                <meta itemprop="description" content="Adventure in Hatta with a tour featuring Wadi Bashing, Hatta Dam, Heritage Clay Village, and more, with pickup from home or hotel and optional lunch.">
+                <meta itemprop="sku" content="HMT-600">
+                <div class="package-image">
+                    <img src="img/hata.webp" alt="Hatta Mountain Tour with scenic views and Hatta Dam" itemprop="image">
+                </div>
+                <div class="package-details">
+                    <h3 itemprop="name">Hatta Mountain Tour</h3>
+                    <ul class="package-info">
+                        <li class="tick-item">Pick & Drop From Your Home/Hotel</li>
+                        <li class="tick-item">Wadi Bashing</li>
+                        <li class="tick-item">Enjoy Incredible Views of the Hatta Mountains Safari</li>
+                        <li class="tick-item">Hatta Dam: Discover the Breathtaking Dam & Surrounding Hills</li>
+                        <li class="tick-item">Discover The Heritage Clay Village & 16th Century Castle</li>
+                        <li class="tick-item">Swim in Fresh Water Pools</li>
+                        <li class="tick-item">Carpet Market (Old Souk)</li>
+                        <li class="tick-item">Camel Market</li>
+                        <li class="tick-item">Lunch at Hatta Fort Hotel (Extra Cost)</li>
+                        <li class="tick-item">Cold Drinks, Mineral Water, Snacks</li>
+                    </ul>
+                    <div class="price-button-group" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                        <meta itemprop="priceCurrency" content="AED">
+                        <meta itemprop="price" content="600">
+                        <meta itemprop="availability" content="http://schema.org/InStock">
+                        <p>AED 600 Private Luxury 4×4 and SUV Cars<br>AED 150 Per Person</p>
+                        <div class="button-container">
+                            <a href="https://dubaidesertdeals.com/form/" class="book-now-button" itemprop="url">Book Now</a>
+                            <a href="https://wa.me/+971529817405" class="whatsapp-button" rel="nofollow">WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 4: Khor Fakkan Tour -->
+            <article class="package" itemscope itemtype="http://schema.org/Product">
+                <meta itemprop="name" content="Khor Fakkan Tour">
+                <meta itemprop="description" content="Explore Khor Fakkan with visits to Shees Park, Khorfakkan Waterfall, Al Rafisah Dam, and more, with optional lunch and kayaking, plus pickup from home or hotel.">
+                <meta itemprop="sku" content="KFT-600">
+                <div class="package-image">
+                    <img src="img/kohf.webp" alt="Khor Fakkan Tour with waterfall and scenic views" itemprop="image">
+                </div>
+                <div class="package-details">
+                    <h3 itemprop="name">Khor Fakkan Tour</h3>
+                    <ul class="package-info">
+                        <li class="tick-item">Shees Park Khorfakkan</li>
+                        <li class="tick-item">Visit Khorfakkan Waterfall</li>
+                        <li class="tick-item">Al Rafisah Dam</li>
+                        <li class="tick-item">Visit Swan Lake at Rafisah Lake</li>
+                        <li class="tick-item">Khorfakkan Shore Walk</li>
+                        <li class="tick-item">360° City View at Al Rabi Tower</li>
+                        <li class="tick-item">Henna Tattoos (For Ladies & Kids)</li>
+                        <li class="tick-item">Shesha, Hublee Bublee Smoking (For Adults)</li>
+                        <li class="tick-item">Lunch at Rafisah Dam (Optional)</li>
+                        <li class="tick-item">Mineral Water for Drinking</li>
+                        <li class="tick-item">Kayaking in Dam (Optional)</li>
+                    </ul>
+                    <div class="price-button-group" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                        <meta itemprop="priceCurrency" content="AED">
+                        <meta itemprop="price" content="600">
+                        <meta itemprop="availability" content="http://schema.org/InStock">
+                        <p>AED 600 Private<br>AED 280 Per Person</p>
+                        <div class="button-container">
+                            <a href="https://dubaidesertdeals.com/form/" class="book-now-button" itemprop="url">Book Now</a>
+                            <a href="https://wa.me/+971529817405" class="whatsapp-button" rel="nofollow">WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 5: Musandam Tour -->
+            <article class="package" itemscope itemtype="http://schema.org/Product">
+                <meta itemprop="name" content="Musandam Tour">
+                <meta itemprop="description" content="Adventure in Musandam with a coach tour, featuring snorkeling, hand line fishing, banana boat rides, and lunch on board, with pickup from standard locations.">
+                <meta itemprop="sku" content="MT-200">
+                <div class="package-image">
+                    <img src="img/musandam.webp" alt="Musandam Tour with sea creatures and scenic caves" itemprop="image">
+                </div>
+                <div class="package-details">
+                    <h3 itemprop="name">Musandam Tour</h3>
+                    <ul class="package-info">
+                        <li class="tick-item">Pick & Drop From Standard Locations by Coach</li>
+                        <li class="tick-item">Pre-Approval Required From Oman Government</li>
+                        <li class="tick-item">Hand Line Fishing</li>
+                        <li class="tick-item">Mesmerizing Encounter With Sea Creatures (Snorkeling)</li>
+                        <li class="tick-item">Take a Shot of the Mysterious Scenery of the Cave</li>
+                        <li class="tick-item">Unlimited Water, Soft Drinks & Juices</li>
+                        <li class="tick-item">Dive & Swim With Life Jackets Provided</li>
+                        <li class="tick-item">Ride & Sail the Banana Boat On Your Own</li>
+                        <li class="tick-item">Lunch Will Be Served On Board</li>
+                    </ul>
+                    <div class="price-button-group" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                        <meta itemprop="priceCurrency" content="AED">
+                        <meta itemprop="price" content="200">
+                        <meta itemprop="availability" content="http://schema.org/InStock">
+                        <p>AED 200 Per Person</p>
+                        <div class="button-container">
+                            <a href="https://dubaidesertdeals.com/form/" class="book-now-button" itemprop="url">Book Now</a>
+                            <a href="https://wa.me/+971529817405" class="whatsapp-button" rel="nofollow">WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/jquery.magnific-popup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simplelightbox@2.10.3/dist/simple-lightbox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/easing@1.4.1/easing.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/superfish@1.7.10/dist/js/superfish.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sticky-js@1.2.0/dist/sticky.min.js"></script>
+
+    <!-- Google Translate -->
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script>
+        function googleTranslateElementInit() {
+            const userLang = navigator.language || navigator.userLanguage;
+            const langMap = {
+                'en': 'en', 'es': 'es', 'fr': 'fr', 'de': 'de', 'zh': 'zh-CN',
+                'ko': 'ko', 'ja': 'ja', 'it': 'it', 'ru': 'ru'
+            };
+            const defaultLang = langMap[userLang.slice(0, 2)] || 'en';
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,es,fr,de,zh-CN,ko,ja,it,ru',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_translate_element');
+            const dropdown = document.querySelector('#google_translate_element select');
+            if (dropdown) {
+                dropdown.value = defaultLang;
+                dropdown.dispatchEvent(new Event('change'));
+            }
+        }
+    </script>
+
+    <!-- Hamburger Menu Toggle -->
+    <script>
+        $(document).ready(function() {
+            $('.menu-toggle').click(function() {
+                $('.nav-menu').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+</html>

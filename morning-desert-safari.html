@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Morning Desert Safari Dubai</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="Description" content="Premier site for desert safari in dubai, morning desert safari, evening desert safari, overnight desert safari, dubai city tour and dinner cruises.">
+    <meta name="Keywords" content="desert safari dubai, dubai desert safari, desert safari UAE, dubai city tour, dhow cruise dinner, desert safari cost, dubai city tours, prices of desert safari in Dubai, dubai desert, dune bashing, sand ski, camel ride, morning desert safari, abu dhabi city tours">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="RASDEALS">
+    <link rel="canonical" href="http://www.rasdeals.com">
+
+    <!-- Favicons -->
+    <link href="img/favicon.png" rel="icon">
+    <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/magnific-popup.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/simplelightbox@2.10.3/dist/simple-lightbox.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --primary: #D4A017;
+            --secondary: #1A3C34;
+            --accent: #F4E4BC;
+            --text: #333333;
+            --white: #FFFFFF;
+            --hover: #C68B00;
+            --whatsapp-green: #25D366;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            background-color: var(--white);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: linear-gradient(to right, var(--secondary), var(--primary));
+            color: var(--white);
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .nav-left {
+            display: flex;
+            align-items: center;
+            margin-left: -2rem;
+        }
+
+        #logo img {
+            height: 60px;
+            transition: transform 0.3s ease;
+            margin-right: 1rem;
+        }
+
+        #logo img:hover {
+            transform: scale(1.1);
+        }
+
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+        }
+
+        .nav-menu li {
+            margin-left: 2rem;
+            position: relative;
+            white-space: nowrap;
+        }
+
+        .nav-menu li a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu li a:hover {
+            color: var(--accent);
+        }
+
+        .nav-menu .menu-has-children {
+            position: relative;
+        }
+
+        .nav-menu .menu-has-children:hover .dropdown {
+            display: block;
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: var(--white);
+            color: var(--text);
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            min-width: 200px;
+            padding: 0.5rem 0;
+            z-index: 1000;
+        }
+
+        .dropdown li {
+            margin: 0;
+            white-space: nowrap;
+        }
+
+        .dropdown li a {
+            color: var(--text);
+            padding: 0.5rem 1rem;
+            display: block;
+        }
+
+        .dropdown li a:hover {
+            background: var(--accent);
+            color: var(--secondary);
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .contact-info a {
+            color: var(--white);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .contact-info .email-btn {
+            background: var(--secondary);
+        }
+
+        .contact-info .email-btn:hover {
+            background: var(--hover);
+            color: var(--white);
+        }
+
+        .contact-info .whatsapp-btn {
+            background: var(--whatsapp-green);
+        }
+
+        .contact-info .whatsapp-btn:hover {
+            background: #20b356;
+            color: var(--white);
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            color: var(--white);
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--secondary);
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .nav-menu li {
+                margin: 0.5rem 0;
+            }
+
+            .nav-left {
+                margin-left: 0;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 0.5rem;
+                margin-top: 1rem;
+            }
+        }
+
+        .whatsapp-link {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .whatsapp-link a {
+            display: flex;
+            align-items: center;
+            background: var(--whatsapp-green);
+            color: var(--white);
+            padding: 10px 15px;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .whatsapp-link a:hover {
+            background: #20b356;
+        }
+
+        .whatsapp-link img {
+            margin-right: 10px;
+        }
+
+        .tellink {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 1000;
+            text-align: center;
+        }
+
+        .tellink a {
+            display: block;
+            background: var(--primary);
+            color: var(--white);
+            padding: 10px;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .tellink a:hover {
+            background: var(--hover);
+        }
+
+        .tellink img {
+            width: 40px;
+            height: 40px;
+        }
+
+        footer {
+            background: var(--secondary);
+            color: var(--white);
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+            margin: 0 5px;
+        }
+
+        footer a:hover {
+            color: var(--hover);
+        }
+
+        footer .breadcrumb__divider {
+            color: var(--white);
+            margin: 0 5px;
+        }
+
+        footer .credits {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 80px;
+            background: var(--primary);
+            color: var(--white);
+            padding: 10px;
+            border-radius: 50%;
+            text-decoration: none;
+            z-index: 1000;
+            transition: background 0.3s ease;
+        }
+
+        .back-to-top:hover {
+            background: var(--hover);
+        }
+
+        /* Intro Section */
+        #intro {
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            position: relative;
+        }
+
+        /* About Section */
+        #about {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        #about h2 {
+            font-size: 24px;
+            color: var(--text);
+            margin-bottom: 20px;
+        }
+
+        #about .headd {
+            font-size: 32px;
+            color: var(--secondary);
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        /* Package Sections (Morning Desert Safari Packages) */
+        .package-section {
+            padding: 40px 20px;
+            text-align: center;
+            background: antiquewhite;
+        }
+
+        .package-section h2 {
+            font-size: 32px;
+            color: var(--secondary);
+            font-weight: bold;
+            margin-bottom: 40px;
+        }
+
+        .packages-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin: 0 auto;
+            padding: 20px 10px;
+        }
+
+        .package {
+            width: 100%;
+            max-width: 350px;
+            border: 2px solid var(--primary);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease;
+        }
+
+        .package:hover {
+            transform: scale(1.05);
+        }
+
+        .package-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .package-details {
+            padding: 15px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            min-height: 200px;
+        }
+
+        .package-details h2 {
+            font-size: 20px;
+            margin: 0 0 10px 0;
+            min-height: 48px;
+        }
+
+        .package-info {
+            padding: 0;
+            margin: 0 0 15px 0;
+            line-height: 1.5;
+            list-style-type: none;
+            flex-grow: 1;
+            text-align: left;
+        }
+
+        .package-info li {
+            margin-bottom: 8px;
+            padding-left: 24px;
+            font-size: 16px;
+            color: var(--text);
+            position: relative;
+        }
+
+        .package-info li i.fa-check {
+            color: var(--primary);
+            position: absolute;
+            left: 0;
+            top: 2px;
+            font-size: 16px;
+            margin-right: 8px;
+            display: inline-block;
+            width: 16px;
+            text-align: center;
+        }
+
+        .price-button-group {
+            margin-top: auto;
+        }
+
+        .price-button-group p {
+            margin: 0 0 15px 0;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 10px;
+        }
+
+        .book-now-button {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            text-align: center;
+            flex: 1;
+            transition: background-color 0.3s;
+        }
+
+        .book-now-button:hover {
+            background-color: var(--hover);
+        }
+
+        .whatsapp-button {
+            background-color: var(--whatsapp-green);
+            color: var(--white);
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            text-align: center;
+            flex: 1;
+            transition: background-color 0.3s;
+        }
+
+        .whatsapp-button:hover {
+            background-color: #1ebe56;
+        }
+
+        @media (max-width: 1100px) {
+            .packages-container {
+                gap: 15px;
+            }
+            .package {
+                max-width: 320px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .packages-container {
+                flex-direction: column;
+                align-items: stretch;
+                padding: 2px 0;
+                width: 100%;
+                margin: 0;
+            }
+            .package {
+                width: 100%;
+                max-width: none;
+                margin: 0;
+            }
+            .button-container {
+                flex-direction: column;
+            }
+            .book-now-button, .whatsapp-button {
+                width: 100%;
+            }
+            .package-section h2 {
+                font-size: 26px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .package-details h2 {
+                font-size: 18px;
+            }
+            .package-info li {
+                font-size: 14px;
+            }
+            .price-button-group p {
+                font-size: 16px;
+            }
+        }
+
+        /* Activities Section */
+        .activities-section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .activities-section .headd {
+            font-size: 32px;
+            color: var(--secondary);
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: left !important;
+        }
+
+        .activities-section h2 {
+            font-size: 24px;
+            color: var(--text);
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .activities-section strong {
+            color: var(--primary);
+        }
+
+        /* General Section Styling */
+        .section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 32px;
+            color: var(--secondary);
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .section h3 {
+            font-size: 24px;
+            color: var(--secondary);
+            margin: 20px 0 10px;
+        }
+
+        .section p {
+            font-size: 16px;
+            color: var(--text);
+            margin-bottom: 15px;
+        }
+
+        .section img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+    </style>
+
+    <!-- Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KQN7F15NQV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-KQN7F15NQV');
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w,d,s,l,i){
+            w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+            var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+            j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+            f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-5KJ8DVHB');
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w,d,s,l,i){
+            w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+            var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+            j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+            f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-TZW3TNDV');
+    </script>
+    <!-- Meta Pixel -->
+    <script>
+        !function(f,b,e,v,n,t,s){
+            if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];
+            t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)
+        }(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '389313877271978');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=389313877271978&ev=PageView&noscript=1" /></noscript>
+</head>
+
+<body id="body">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5KJ8DVHB" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TZW3TNDV" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <div id="google_translate_element"></div>
+
+    <header id="header">
+        <div class="navbar">
+            <div class="nav-left">
+                <div id="logo">
+                    <a href="index.html"><img src="img/logo.webp" alt="RASDEALS Logo"></a>
+                </div>
+                <nav>
+                    <button class="menu-toggle"><i class="fa fa-bars"></i></button>
+                    <ul class="nav-menu">
+                        <li class="menu-active"><a href="index.html#">Home</a></li>
+                        <li class="menu-has-children">
+                            <a href="index.html#">Desert Safari Tours</a>
+                            <ul class="dropdown">
+                                <li><a href="desert-safari-dubai.html">Evening Desert Safari</a></li>
+                                <li><a href="morning-desert-safari.html">Morning Desert Safari</a></li>
+                                <li><a href="overnight-safari-dinner.html">Overnight Desert Safari</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="city-tours.html">City Tours</a></li>
+                        <li><a href="water-activites.html">Water Activities</a></li>
+                        <li><a href="abudhabi.html">Abu Dhabi City Tours</a></li>
+                        <li><a href="airport-transfer.html">Airport Transfer</a></li>
+                        <li><a href="dune-buggy.html">Dune Buggy</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="contact-info">
+                <a href="mailto:rasahraloqmanbooking@gmail.com" class="email-btn"><i class="fa fa-envelope-o"></i> Email Us</a>
+                <a href="https://wa.me/+971529817405" target="_blank" class="whatsapp-btn"><i class="fa fa-whatsapp"></i> WhatsApp</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Intro Section -->
+    <section id="intro" style="background-image: url(./img/even.jpg);">
+        <div class="intro-content"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="headd">Morning Desert Safari</h2>
+            <h2>Experience the magical beauty of the desert at dawn with our Morning Desert Safari. Escape the city and immerse yourself in golden dunes and tranquil surroundings.</h2>
+            <h3>For Booking Call or WhatsApp Desert Safari Deals – 24/7 Support</h3>
+        </div>
+    </section>
+
+    <!-- Morning Desert Safari Packages Section -->
+    <section class="package-section">
+        <h2>Morning Desert Safari Packages</h2>
+        <div class="packages-container">
+            <!-- Shared Morning Safari -->
+            <div class="package">
+                <div class="package-image">
+                    <img src="img/morning.webp" alt="Shared Morning Safari" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="package-details">
+                    <h2>Shared Morning Safari</h2>
+                    <ul class="package-info">
+                        <li><i class="fa fa-check"></i> Dune Bashing 20+ minutes in Red Dunes</li>
+                        <li><i class="fa fa-check"></i> Sand Boarding, Camel Ride, Arabic Costumes for Photos</li>
+                        <li><i class="fa fa-check"></i> High Dune for Sunset Views, Free Henna Tattoos</li>
+                        <li><i class="fa fa-check"></i> Tea/Coffee, Fresh Dates, Soft Drinks, Water</li>
+                    </ul>
+                    <div class="price-button-group">
+                        <p>Starting at competitive rates</p>
+                        <div class="button-container">
+                            <a href="#booking-form" class="book-now-button">Inquire Now</a>
+                            <a href="https://wa.me/+971529817405" class="whatsapp-button">WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Private Morning Safari -->
+            <div class="package">
+                <div class="package-image">
+                    <img src="img/eve.webp" alt="Private Morning Safari" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="package-details">
+                    <h2>Private Morning Safari</h2>
+                    <ul class="package-info">
+                        <li><i class="fa fa-check"></i> Dune Bashing 20+ minutes in Red Dunes</li>
+                        <li><i class="fa fa-check"></i> Sand Boarding, Camel Ride, Arabic Costumes for Photos</li>
+                        <li><i class="fa fa-check"></i> High Dune for Sunset Views, Free Henna Tattoos</li>
+                        <li><i class="fa fa-check"></i> Tea/Coffee, Fresh Dates, Soft Drinks, Water</li>
+                    </ul>
+                    <div class="price-button-group">
+                        <p>Starting at competitive rates</p>
+                        <div class="button-container">
+                            <a href="#booking-form" class="book-now-button">Inquire Now</a>
+                            <a href="https://wa.me/+971529817405" class="whatsapp-button">WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities Section -->
+    <section class="activities-section">
+        <div class="container">
+            <h2 class="headd">Things to Do in Morning Desert Safari</h2>
+            <h2>Desert safari offers endless entertainment. Here are the top activities:<br>
+                <strong>Quad Biking & Buggy Driving:</strong> Enjoy thrilling rides under the morning sun with soft sand.<br>
+                <strong>Morning Camel Safari:</strong> Experience a guided camel trek across the desert.<br>
+                <strong>Learn Arabian Culture:</strong> Explore Arabic traditions at our special campsite.</h2>
+        </div>
+    </section>
+
+    <div class="whatsapp-link">
+        <a href="https://wa.me/+971529817405"><img src="/img/whatsapp.webp" alt="whatsapp" width="50" height="50">+971529817405</a>
+    </div>
+
+    <div class="tellink">
+        <a href="tel:+971529817405"><img src="https://pngimg.com/d/phone_PNG49006.png" alt=""></a>
+        <span>Call Now</span>
+    </div>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="copyright">
+                <i class="fa fa-envelope-o"></i><a href="mailto:rasahraloqmanbooking@gmail.com"> Email Us</a>
+                <span class="breadcrumb__divider">|</span>
+                <i class="fa fa-phone" style="color: #ca6624"></i>
+                <a href="https://wa.me/+971529817405" target="_blank"><i class="fa fa-whatsapp" style="color: #0cc243"></i></a>
+                <a href="tel:+971529817405"> +971529817405 </a>
+                <span class="breadcrumb__divider">|</span>
+                <a href="https://wa.me/+971529817405"> Contact Us </a>
+            </div>
+        </div>
+        <div class="credits">
+            © Copyright <strong>RASDEALS</strong>. All Rights Reserved.
+        </div>
+    </footer>
+
+    <a href="index.html#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/jquery.magnific-popup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simplelightbox@2.10.3/dist/simple-lightbox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/easing@1.4.1/easing.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/superfish@1.7.10/dist/js/superfish.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sticky-js@1.2.0/dist/sticky.min.js"></script>
+
+    <!-- Google Translate -->
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script>
+        function googleTranslateElementInit() {
+            const userLang = navigator.language || navigator.userLanguage;
+            const langMap = {
+                'en': 'en', 'es': 'es', 'fr': 'fr', 'de': 'de', 'zh': 'zh-CN',
+                'ko': 'ko', 'ja': 'ja', 'it': 'it', 'ru': 'ru'
+            };
+            const defaultLang = langMap[userLang.slice(0, 2)] || 'en';
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,es,fr,de,zh-CN,ko,ja,it,ru',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_translate_element');
+            const dropdown = document.querySelector('#google_translate_element select');
+            if (dropdown) {
+                dropdown.value = defaultLang;
+                dropdown.dispatchEvent(new Event('change'));
+            }
+        }
+    </script>
+
+    <!-- Hamburger Menu Toggle -->
+    <script>
+        $(document).ready(function() {
+            $('.menu-toggle').click(function() {
+                $('.nav-menu').toggleClass('active');
+            });
+        });
+    </script>
+
+    <!-- WhatsApp Chat Widget -->
+    <script>
+        var url = "https://wati-integration-prod-service.clare.ai/v2/watiWidget.js?38828";
+        var s = document.createElement("script");
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = url;
+        var options = {
+            enabled: true,
+            chatButtonSetting: {
+                backgroundColor: "#00e785",
+                ctaText: "Book Now",
+                borderRadius: "25",
+                marginLeft: "0",
+                marginRight: "20",
+                marginBottom: "20",
+                ctaIconWATI: false,
+                position: "right"
+            },
+            brandSetting: {
+                brandName: "RASDEALS",
+                brandSubTitle: "undefined",
+                brandImg: "https://www.wati.io/wp-content/uploads/2023/04/Wati-logo.svg",
+                welcomeText: "Hi there!\nHow can I help you?",
+                messageText: "Hello, %0A I visited {{page_link}}",
+                backgroundColor: "#00e785",
+                ctaText: "Book Now",
+                borderRadius: "25",
+                autoShow: false,
+                phoneNumber: "971529817405"
+            }
+        };
+        s.onload = function() {
+            CreateWhatsappChatWidget(options);
+        };
+        var x = document.getElementsByTagName("script")[0];
+        x.parentNode.insertBefore(s, x);
+    </script>
+</body>
+
+</html>
